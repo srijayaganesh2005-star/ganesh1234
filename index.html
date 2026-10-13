@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELOOP Rewards — Exchange Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="VELOOP Rewards home">
+      <span class="brand-mark">V</span>
+      <span class="brand-words"><strong>VELOOP</strong><small>R E W A R D S</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#"><span>⌂</span> Home</a>
+      <a href="#"><span>✦</span> About</a>
+      <a href="#"><span>▣</span> Dashboard</a>
+      <a href="#"><span class="pink">●</span> Quiz</a>
+      <a class="active" href="#exchange"><span>◇</span> Exchange Center</a>
+    </nav>
+    <div class="top-actions">
+      <div class="mini-balance"><span class="gem-dot">◆</span><span><small>GEMS</small><b id="navGems">12,450</b></span></div>
+      <button class="icon-button" aria-label="Notifications">♢<i></i></button>
+      <button class="profile-button" id="profileToggle"><span class="avatar">D</span><span><b>deva</b><small>Member</small></span><span class="chevron">⌃</span></button>
+    </div>
+    <div class="profile-menu" id="profileMenu">
+      <div class="profile-head"><span class="avatar large">D</span><span><b>deva</b><small>Member Account</small></span></div>
+      <div class="profile-balances"><div><small>GEMS</small><b id="menuGems">12,450</b></div><div><small>VEs</small><b id="menuVes">1,280</b></div></div>
+      <a href="#history"><span>↔</span><span><b>Transaction History</b><small>View your reward activity</small></span><em>→</em></a>
+      <a href="#"><span>▣</span><span><b>Dashboard</b><small>View your account</small></span><em>→</em></a>
+      <a href="#" class="logout"><span>↪</span><span><b>Logout</b><small>Sign out of your account</small></span><em>→</em></a>
+    </div>
+  </header>
+
+  <main id="exchange" class="page-shell">
+    <section class="hero">
+      <p class="eyebrow hidden">VELOOP REWARDS</p>
+      <h1>Exchange Center</h1>
+      <p class="hero-copy">Turn your earned Gems into VEs and continue your reward journey.</p>
+    </section>
+
+    <section class="balance-grid" aria-label="Your balances">
+      <article class="balance-card gems-card">
+        <div class="balance-icon purple">◇</div>
+        <div><p>Available Gems</p><strong id="gemsBalance">12,450</strong><small>G E M S</small></div>
+      </article>
+      <article class="balance-card ves-card">
+        <div class="balance-icon gold">◉</div>
+        <div><p>Your VE Balance</p><strong id="vesBalance">1,280</strong><small>V E S</small></div>
+      </article>
+    </section>
+
+    <section class="conversions-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">REWARD EXCHANGE</p><h2>Available Conversions</h2><p>Choose an available reward conversion and review it before confirming.</p></div>
+        <span class="active-count">3 Active</span>
+      </div>
+      <div class="conversion-grid" id="conversionGrid">
+        <article class="conversion-card">
+          <div class="conversion-top"><div><h3>Starter Conversion</h3><p>A simple way to turn your earned Gems into VEs.</p></div><span class="status">Available</span></div>
+          <div class="conversion-flow">
+            <div class="flow-item"><div class="flow-icon purple">◇</div><span>Required Gems</span><strong>1,000</strong><small>G E M S</small></div>
+            <div class="flow-arrow">←</div>
+            <div class="flow-item receive"><div class="flow-icon gold">◉</div><span>You Receive</span><strong>100</strong><small>V E s</small></div>
+          </div>
+          <button class="convert-button" data-gems="1000" data-ves="100" data-name="Starter Conversion">Convert 1,000 Gems <span>→</span> 100 VEs</button>
+        </article>
+        <article class="conversion-card">
+          <div class="conversion-top"><div><h3>Reward Boost</h3><p>Convert more Gems and receive a larger VE reward.</p></div><span class="status">Available</span></div>
+          <div class="conversion-flow">
+            <div class="flow-item"><div class="flow-icon purple">◇</div><span>Required Gems</span><strong>2,500</strong><small>G E M S</small></div>
+            <div class="flow-arrow">←</div>
+            <div class="flow-item receive"><div class="flow-icon gold">◉</div><span>You Receive</span><strong>300</strong><small>V E s</small></div>
+          </div>
+          <button class="convert-button" data-gems="2500" data-ves="300" data-name="Reward Boost">Convert 2,500 Gems <span>→</span> 300 VEs</button>
+        </article>
+        <article class="conversion-card">
+          <div class="conversion-top"><div><h3>Premium Conversion</h3><p>Use a larger Gem balance for a premium VE reward.</p></div><span class="status">Available</span></div>
+          <div class="conversion-flow">
+            <div class="flow-item"><div class="flow-icon purple">◇</div><span>Required Gems</span><strong>5,000</strong><small>G E M S</small></div>
+            <div class="flow-arrow">←</div>
+            <div class="flow-item receive"><div class="flow-icon gold">◉</div><span>You Receive</span><strong>700</strong><small>V E s</small></div>
+          </div>
+          <button class="convert-button" data-gems="5000" data-ves="700" data-name="Premium Conversion">Convert 5,000 Gems <span>→</span> 700 VEs</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="history-card" id="history">
+      <div class="history-heading"><div class="history-icon">◴</div><div><h2>Conversion History</h2><p>Track your completed reward conversions.</p></div></div>
+      <div id="historyContent" class="empty-history"><div class="history-empty-icon">◴</div><h3>No conversions yet</h3><p>Your completed reward conversions will appear<br class="desktop-break"> here.</p></div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-heading"><div><p class="eyebrow">THE PROCESS</p><h2>How Exchange Works</h2><p>Convert your earned Gems into valuable VE rewards.</p></div></div>
+      <div class="steps-grid">
+        <article class="step"><span>01</span><div class="step-icon">◇</div><h3>Choose Gems</h3><p>Select an available conversion.</p></article>
+        <article class="step"><span>02</span><div class="step-icon">↔</div><h3>Confirm</h3><p>Review and confirm your conversion.</p></article>
+        <article class="step"><span>03</span><div class="step-icon">◉</div><h3>Receive VEs</h3><p>Your VE balance updates successfully.</p></article>
+      </div>
+    </section>
+
+    <section class="rules-card">
+      <p class="eyebrow">IMPORTANT INFORMATION</p><h2>Exchange Rules</h2>
+      <ul>
+        <li><span>✓</span> Only eligible Gems can be exchanged.</li>
+        <li><span>↔</span> Exchange values are predefined by VELOOP Rewards.</li>
+        <li><span>⚙</span> Available conversion opportunities may vary.</li>
+        <li><span>✓</span> Balances update after a successful conversion.</li>
+        <li><span>▤</span> Please review your conversion before confirming.</li>
+        <li><span>!</span> Successful conversions cannot be duplicated.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">V</span><span class="brand-words"><strong>VELOOP</strong><small>R E W A R D S</small></span></a>
+    <p>Earn. Engage. Exchange.</p>
+    <nav><a href="#">Home</a><a href="#">About</a><a href="#">Dashboard</a><a href="#exchange">Exchange Center</a></nav>
+    <div class="footer-bottom"><span>© 2026 VELOOP Rewards. All rights reserved.</span><span>Built for the reward-driven.</span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="confirmModal" aria-hidden="true">
+    <section class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <div class="modal-symbol">↔</div><p class="eyebrow">REVIEW YOUR EXCHANGE</p>
+      <h2 id="modalTitle">Confirm conversion</h2>
+      <p class="modal-copy">Please check the details before continuing.</p>
+      <div class="modal-summary"><div><span>Gems to spend</span><strong id="modalGems">1,000 Gems</strong></div><div><span>VEs to receive</span><strong id="modalVes">100 VEs</strong></div><div><span>Gems remaining</span><strong id="modalRemaining">11,450 Gems</strong></div></div>
+      <p class="modal-error" id="modalError"></p>
+      <button class="confirm-button" id="confirmConversion">Confirm Conversion <span>→</span></button>
+      <button class="cancel-button" id="cancelConversion">Cancel</button>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
